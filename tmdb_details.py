@@ -54,6 +54,8 @@ for film in movies_ids:
     url =  'http://api.themoviedb.org/3/movie/' + movie_id
     responseJSON = requests.get(url, params =api_params).json()
 
+    # Lista de gêneros separados por vírgula 
+
     genres = ''
     genresobj = responseJSON['genres']
     for genre in genresobj:
@@ -69,6 +71,7 @@ fields = ['id' , 'name' , 'genres' , 'budget' , 'popularity' , 'release_date' , 
 df = pd.DataFrame(movie_specifications, columns=fields)
 
 # Preenchimento de dados incompletos
+
 df.at[0,'budget'] = 200000
 df.at[9,'budget'] = 2183000
 df.at[10,'budget'] = 699000

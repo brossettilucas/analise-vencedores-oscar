@@ -6,8 +6,12 @@ api_key = 'Insira sua chave de acesso aqui'
 language = 'en-US'
 api_params={'api_key':api_key,'language':language}
 
+# Acesso à planilha com os ids de acesso a cada filme na api
+
 df_filmes = pd.read_csv('detalhes_tecnicos_oscar.csv')
 ref = df_filmes[['id' , 'name']]
+
+# Monta dataframe com lista de atores e diretores envolvidos em cada filme
 
 cast_data = []
 for i in ref.index:
