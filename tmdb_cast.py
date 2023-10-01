@@ -2,7 +2,7 @@ import requests
 import json
 import pandas as pd
 
-api_key = '35466970803fec170a3c718aacce0ee4'
+api_key = 'Insira sua chave de acesso aqui'
 language = 'en-US'
 api_params={'api_key':api_key,'language':language}
 
